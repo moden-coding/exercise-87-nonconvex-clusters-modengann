@@ -13,7 +13,6 @@ def find_permutation(n_clusters, real_labels, labels):
     #Loop through values 
     for i in range(n_clusters):
         
-        #modified this to include when outliers are present
         idx = labels == i
         # Choose the most common label among data points in the cluster
         new_label=scipy.stats.mode(real_labels[idx])[0][0]
